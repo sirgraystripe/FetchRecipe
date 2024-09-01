@@ -8,11 +8,13 @@
 import Foundation
 
 struct RecipeServiceMock: RecipeService {
-    func fetchDesserts() -> NetworkResult<[Dessert]> {
+    func fetchDesserts() -> NetworkResult<[Meal]> {
         .failure(.notImplemented)
     }
 
-    func fetchMealDetails(meal _: Meal) -> MealInfo {}
+    func fetchMealDetails(meal _: Meal) -> NetworkResult<MealInfo> {
+        .failure(.notImplemented)
+    }
 
     var environment: AppEnvironment
 }

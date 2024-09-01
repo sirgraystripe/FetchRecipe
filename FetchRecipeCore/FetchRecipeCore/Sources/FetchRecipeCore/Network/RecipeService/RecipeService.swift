@@ -8,6 +8,6 @@
 import Foundation
 
 protocol RecipeService: BaseService {
-    func fetchDesserts() -> NetworkResult<[Dessert]>
+    func fetchDesserts() -> NetworkResult<[Meal]>
     func fetchMealDetails(meal: Meal) -> NetworkResult<MealInfo>
 }
