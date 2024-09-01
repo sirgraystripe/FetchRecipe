@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import FetchRecipeCore
 
 @main
 struct FetchRecipeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
