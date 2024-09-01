@@ -1,5 +1,5 @@
-import XCTest
 @testable import FetchRecipeCore
+import XCTest
 
 final class FetchRecipeCoreTests: XCTestCase {
     func testExample() throws {

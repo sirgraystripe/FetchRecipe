@@ -5,8 +5,8 @@
 //  Created by Peter Kos on 9/1/24.
 //
 
-import SwiftUI
 import FetchRecipeCore
+import SwiftUI
 
 @main
 struct FetchRecipeApp: App {

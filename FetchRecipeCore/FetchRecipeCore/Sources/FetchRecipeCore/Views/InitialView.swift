@@ -1,5 +1,5 @@
 //
-//  RootView.swift
+//  InitialView.swift
 //
 //
 //  Created by Peter Kos on 9/1/24.
@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-public struct RootView: View {
+public struct InitialView: View {
+    @Environment(Store.self) private var store
 
     public init() {}
-    
+
     public var body: some View {
-        Text("Hello, World!")
+        EmptyView()
     }
 }
 
 #Preview {
-    RootView()
+    InitialView()
 }
