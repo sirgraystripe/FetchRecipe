@@ -7,20 +7,14 @@
 
 import Foundation
 
-struct Ingredient<MeasuredUnit: Unit> {
+struct Ingredient {
     var name: String
-    var measurement: Measurement<MeasuredUnit>
-}
+    var measurement: Measurement<Unit>?
 
-extension Ingredient where MeasuredUnit == UnitMass {
-    init(name: String, measurement: Measurement<MeasuredUnit>) {
-        self.name = name
-        self.measurement = measurement
-    }
-}
-
-extension Ingredient where MeasuredUnit == UnitVolume {
-    init(name: String, measurement: Measurement<MeasuredUnit>) {
+    init?(name: String?, measurement: Measurement<Unit>?) {
+        guard let name, let measurement else {
+            return nil
+        }
         self.name = name
         self.measurement = measurement
     }
