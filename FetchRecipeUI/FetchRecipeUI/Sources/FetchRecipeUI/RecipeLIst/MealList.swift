@@ -39,6 +39,7 @@ struct MealList: View {
                 AppLogger.UI.error("Failed to fetch meals: \(error.userFriendlyDescription)")
             }
         }
+        .navigationTitle("Meals")
     }
 }
 
