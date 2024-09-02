@@ -10,16 +10,16 @@ import Foundation
 import RegexBuilder
 
 public struct MealInfo {
-    var id: String = UUID().uuidString
-    var name: String
-    var dateModified: Date?
-    var area: String
+    public var id: String = UUID().uuidString
+    public var name: String
+    public var dateModified: Date?
+    public var area: String
     // TODO: What kinds are there? Make enum!
-    var category: String
+    public var category: String
 
-    var ingredients: [Ingredient]
+    public var ingredients: [Ingredient]
     /// Optional for mocking case where we can use a placeholder
-    var thumbnailURL: URL?
+    public var thumbnailURL: URL?
 
     static func convert(from dto: MealInfoDTO) -> DataResult<MealInfo> {
         guard let thumbnailURL = URL(string: dto.strMealThumb) else {

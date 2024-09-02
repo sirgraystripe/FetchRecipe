@@ -16,7 +16,11 @@ struct RecipeServiceMock: RecipeService {
         .success(Meal.Mock.allMeals)
     }
 
-    func fetchMealDetails(meal _: Meal) -> NetworkResult<MealInfo> {
-        .failure(.notImplemented)
+    func fetchMealDetails(meal: Meal) -> NetworkResult<MealInfo> {
+        if meal == Meal.Mock.tiramisu {
+            .success(MealInfo.Mock.tiramisuInfo)
+        } else {
+            .failure(.notImplemented)
+        }
     }
 }

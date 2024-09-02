@@ -22,7 +22,11 @@ struct MealList: View {
     var body: some View {
         List {
             ForEach(sortedMeals) { meal in
-                MealCell(meal: meal)
+                NavigationLink {
+                    MealDetail(meal: meal)
+                } label: {
+                    MealCell(meal: meal)
+                }
             }
         }
         .task {
@@ -39,6 +43,8 @@ struct MealList: View {
 }
 
 #Preview {
-    MealList(meals: Meal.Mock.allMeals)
-        .mockStore()
+    NavigationStack {
+        MealList(meals: Meal.Mock.allMeals)
+            .mockStore()
+    }
 }

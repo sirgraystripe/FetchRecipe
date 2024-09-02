@@ -8,21 +8,21 @@
 import Foundation
 
 public extension Meal {
-    enum Mock {
+    enum Mock: CaseIterable {
         public static var tiramisu: Meal {
-            Meal(name: "Tiramisu")
+            Meal(id: "tiramisu", name: "Tiramisu")
         }
 
         public static var parfait: Meal {
-            Meal(name: "Parfait")
+            Meal(id: "parfait", name: "Parfait")
         }
 
         public static var chocolateCake: Meal {
-            Meal(name: "Chocolate Cake")
+            Meal(id: "chocolatecake", name: "Chocolate Cake")
         }
 
         public static var vanillaIceCream: Meal {
-            Meal(name: "Vanilla Ice Cream")
+            Meal(id: "vanillaicecream", name: "Vanilla Ice Cream")
         }
 
         public static var allMeals: [Meal] {

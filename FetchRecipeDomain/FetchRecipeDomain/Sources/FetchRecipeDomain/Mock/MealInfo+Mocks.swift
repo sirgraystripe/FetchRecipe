@@ -9,7 +9,7 @@ import Foundation
 
 extension MealInfo: Mockable {
     public enum Mock {
-        static var tiramisuInfo: MealInfo {
+        public static var tiramisuInfo: MealInfo {
             MealInfo(
                 name: "Tiramisu",
                 area: "Area thing",

@@ -19,7 +19,7 @@ struct FetchRecipeApp: App {
 }
 
 public struct RootView: View {
-    @State private var store = Store(environment: .prod)
+    @State private var store = Store(environment: .mock)
 
     public init() {}
 

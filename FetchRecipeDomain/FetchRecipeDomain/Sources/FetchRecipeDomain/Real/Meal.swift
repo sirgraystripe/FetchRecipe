@@ -8,8 +8,8 @@
 import FetchRecipeCore
 import Foundation
 
-public struct Meal: Identifiable {
-    public var id: String = UUID().uuidString
+public struct Meal: Identifiable, Equatable {
+    public var id: String
     public var name: String
     /// Optional for mocking case where we can use a placeholder
     public var thumbnailURL: URL?
