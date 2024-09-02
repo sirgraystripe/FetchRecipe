@@ -14,7 +14,7 @@ public struct Meal: Identifiable {
     /// Optional for mocking case where we can use a placeholder
     public var thumbnailURL: URL?
 
-    static func convert(from dto: MealDTO) -> DataResult<Meal> {
+    public static func convert(from dto: MealDTO) -> DataResult<Meal> {
         guard let id = UUID(uuidString: dto.idMeal) else {
             return .failure(.invalidUUIDFormat("MealDTO"))
         }

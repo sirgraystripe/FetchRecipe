@@ -11,7 +11,7 @@ import Foundation
 public extension Store {
     var recipeService: RecipeService {
         switch environment {
-        case .prod: fatalError("RecipeService not implemented for prod")
+        case .prod: RecipeServiceProd(environment: .prod)
         case .mock: RecipeServiceMock(environment: .mock)
         }
     }

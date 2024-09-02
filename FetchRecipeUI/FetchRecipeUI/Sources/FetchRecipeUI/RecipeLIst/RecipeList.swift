@@ -22,7 +22,7 @@ struct RecipeList: View {
             }
         }
         .task {
-            switch store.recipeService.fetchDesserts() {
+            switch await store.recipeService.fetchDesserts() {
             case let .success(meals):
                 self.meals = meals
                 AppLogger.UI.debug("Fetched meals \(meals.map(\.name))")

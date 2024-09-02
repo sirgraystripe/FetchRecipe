@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct MealsDTO: Codable {
-    let meals: [MealDTO]
+public struct MealsDTO: Codable {
+    public let meals: [MealDTO]
 }
 
-struct MealDTO: Codable, Equatable {
+public struct MealDTO: Codable, Equatable {
     let idMeal: String
     let strMeal: String
     let strMealThumb: String

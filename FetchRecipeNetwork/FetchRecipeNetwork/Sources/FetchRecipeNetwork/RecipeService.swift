@@ -10,6 +10,6 @@ import FetchRecipeDomain
 import Foundation
 
 public protocol RecipeService: BaseService {
-    func fetchDesserts() -> NetworkResult<[Meal]>
-    func fetchMealDetails(meal: Meal) -> NetworkResult<MealInfo>
+    func fetchDesserts() async -> NetworkResult<[Meal]>
+    func fetchMealDetails(meal: Meal) async -> NetworkResult<MealInfo>
 }
