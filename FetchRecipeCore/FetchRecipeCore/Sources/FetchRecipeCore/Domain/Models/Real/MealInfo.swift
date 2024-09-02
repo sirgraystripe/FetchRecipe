@@ -9,15 +9,16 @@ import Foundation
 import RegexBuilder
 
 struct MealInfo {
-    var id: UUID
+    var id = UUID()
+    var name: String
     var dateModified: Date?
     var area: String
     // TODO: What kinds are there? Make enum!
     var category: String
 
     var ingredients: [Ingredient]
-    var name: String
-    var thumbnailURL: URL
+    /// Optional for mocking case where we can use a placeholder
+    var thumbnailURL: URL?
 
     static func convert(from dto: MealInfoDTO) -> DataResult<MealInfo> {
         guard let id = UUID(uuidString: dto.idMeal) else {
@@ -37,10 +38,10 @@ struct MealInfo {
         return .success(
             MealInfo(
                 id: id,
+                name: dto.idMeal,
                 area: dto.strArea,
                 category: dto.strCategory,
                 ingredients: ingredients,
-                name: dto.idMeal,
                 thumbnailURL: thumbnailURL
             )
         )
@@ -109,7 +110,7 @@ struct MealInfo {
         }
 
         if let match = measurement.firstMatch(of: regex) {
-            let (wholeMatch, value, unit) = match.output
+            let (_, value, unit) = match.output
             return (value, unit) as? (Double, Unit)
         } else {
             return nil
