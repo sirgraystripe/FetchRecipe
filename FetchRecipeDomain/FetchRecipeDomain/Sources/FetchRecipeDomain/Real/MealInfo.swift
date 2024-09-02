@@ -5,10 +5,11 @@
 //  Created by Peter Kos on 9/1/24.
 //
 
+import FetchRecipeCore
 import Foundation
 import RegexBuilder
 
-struct MealInfo {
+public struct MealInfo {
     var id = UUID()
     var name: String
     var dateModified: Date?

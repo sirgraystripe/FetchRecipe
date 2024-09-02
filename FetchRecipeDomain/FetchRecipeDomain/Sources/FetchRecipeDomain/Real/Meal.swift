@@ -5,9 +5,10 @@
 //  Created by Peter Kos on 9/1/24.
 //
 
+import FetchRecipeCore
 import Foundation
 
-struct Meal {
+public struct Meal {
     var id = UUID()
     var name: String
     /// Optional for mocking case where we can use a placeholder

@@ -11,6 +11,9 @@
 		D758922D2C85223200AD7588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D758922C2C85223200AD7588 /* Assets.xcassets */; };
 		D75892302C85223200AD7588 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D758922F2C85223200AD7588 /* Preview Assets.xcassets */; };
 		D7C995EE2C8528F50069E55D /* FetchRecipeCore in Frameworks */ = {isa = PBXBuildFile; productRef = D7C995ED2C8528F50069E55D /* FetchRecipeCore */; };
+		D7C995F32C8540D70069E55D /* FetchRecipeDomain in Frameworks */ = {isa = PBXBuildFile; productRef = D7C995F22C8540D70069E55D /* FetchRecipeDomain */; };
+		D7C995F52C8540D70069E55D /* FetchRecipeNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = D7C995F42C8540D70069E55D /* FetchRecipeNetwork */; };
+		D7C995F72C8540D70069E55D /* FetchRecipeUI in Frameworks */ = {isa = PBXBuildFile; productRef = D7C995F62C8540D70069E55D /* FetchRecipeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		D758922C2C85223200AD7588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D758922F2C85223200AD7588 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7C995EB2C8528EA0069E55D /* FetchRecipeCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FetchRecipeCore; path = FetchRecipeCore/FetchRecipeCore; sourceTree = "<group>"; };
+		D7C995EF2C85401E0069E55D /* FetchRecipeNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FetchRecipeNetwork; path = FetchRecipeNetwork/FetchRecipeNetwork; sourceTree = "<group>"; };
+		D7C995F02C8540690069E55D /* FetchRecipeDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FetchRecipeDomain; path = FetchRecipeDomain/FetchRecipeDomain; sourceTree = "<group>"; };
+		D7C995F12C8540B50069E55D /* FetchRecipeUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FetchRecipeUI; path = FetchRecipeUI/FetchRecipeUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C995EE2C8528F50069E55D /* FetchRecipeCore in Frameworks */,
+				D7C995F72C8540D70069E55D /* FetchRecipeUI in Frameworks */,
+				D7C995F32C8540D70069E55D /* FetchRecipeDomain in Frameworks */,
+				D7C995F52C8540D70069E55D /* FetchRecipeNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +45,9 @@
 		D758921C2C85223100AD7588 = {
 			isa = PBXGroup;
 			children = (
+				D7C995F12C8540B50069E55D /* FetchRecipeUI */,
+				D7C995F02C8540690069E55D /* FetchRecipeDomain */,
+				D7C995EF2C85401E0069E55D /* FetchRecipeNetwork */,
 				D7C995EB2C8528EA0069E55D /* FetchRecipeCore */,
 				D75892272C85223100AD7588 /* FetchRecipe */,
 				D75892262C85223100AD7588 /* Products */,
@@ -94,6 +106,9 @@
 			name = FetchRecipe;
 			packageProductDependencies = (
 				D7C995ED2C8528F50069E55D /* FetchRecipeCore */,
+				D7C995F22C8540D70069E55D /* FetchRecipeDomain */,
+				D7C995F42C8540D70069E55D /* FetchRecipeNetwork */,
+				D7C995F62C8540D70069E55D /* FetchRecipeUI */,
 			);
 			productName = FetchRecipe;
 			productReference = D75892252C85223100AD7588 /* FetchRecipe.app */;
@@ -362,6 +377,18 @@
 		D7C995ED2C8528F50069E55D /* FetchRecipeCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FetchRecipeCore;
+		};
+		D7C995F22C8540D70069E55D /* FetchRecipeDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FetchRecipeDomain;
+		};
+		D7C995F42C8540D70069E55D /* FetchRecipeNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FetchRecipeNetwork;
+		};
+		D7C995F62C8540D70069E55D /* FetchRecipeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FetchRecipeUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -5,9 +5,11 @@
 //  Created by Peter Kos on 9/1/24.
 //
 
+import FetchRecipeCore
+import FetchRecipeDomain
 import Foundation
 
-protocol RecipeService: BaseService {
+public protocol RecipeService: BaseService {
     func fetchDesserts() -> NetworkResult<[Meal]>
     func fetchMealDetails(meal: Meal) -> NetworkResult<MealInfo>
 }

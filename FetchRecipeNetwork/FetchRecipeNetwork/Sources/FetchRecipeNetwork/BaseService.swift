@@ -5,8 +5,9 @@
 //  Created by Peter Kos on 9/1/24.
 //
 
+import FetchRecipeCore
 import Foundation
 
-protocol BaseService {
+public protocol BaseService {
     var environment: AppEnvironment { get }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import OSLog
 
-class AppLogger {
+public class AppLogger {
     private enum Subsystem: String, CustomStringConvertible {
         case networking
         case ui
@@ -23,11 +23,11 @@ class AppLogger {
     /// let value = "something"
     /// AppLogger.Network.log(level: .info, "\(value)")
     /// ```
-    static var Network: Logger {
+    public static var Network: Logger {
         Logger(subsystem: Subsystem.networking.description, category: "")
     }
 
-    static var UI: Logger {
+    public static var UI: Logger {
         Logger(subsystem: Subsystem.ui.description, category: "")
     }
 }

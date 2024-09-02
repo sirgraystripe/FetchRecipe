@@ -7,9 +7,9 @@
 
 import Foundation
 
-typealias NetworkResult<T> = Result<T, NetworkError>
+public typealias NetworkResult<T> = Result<T, NetworkError>
 
-enum NetworkError: LocalizedError {
+public enum NetworkError: LocalizedError {
     case notImplemented
 
     var userFriendlyDescription: String {

@@ -5,6 +5,8 @@
 //  Created by Peter Kos on 9/1/24.
 //
 
+import FetchRecipeCore
+import FetchRecipeDomain
 import Foundation
 
 struct RecipeServiceMock: RecipeService {

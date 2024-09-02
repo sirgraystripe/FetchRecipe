@@ -8,10 +8,10 @@
 import SwiftUI
 
 @Observable
-final class Store {
-    var environment: AppEnvironment
+public final class Store {
+    public var environment: AppEnvironment
 
-    init(environment: AppEnvironment) {
+    public init(environment: AppEnvironment) {
         self.environment = environment
     }
 }
@@ -20,14 +20,5 @@ extension View {
     /// To use with Previews
     func mockStore() -> some View {
         environment(Store(environment: .mock))
-    }
-}
-
-extension Store {
-    var recipeService: RecipeService {
-        switch environment {
-        case .prod: fatalError("RecipeService not implemented for prod")
-        case .mock: fatalError("RecipeService not implemented for mock")
-        }
     }
 }

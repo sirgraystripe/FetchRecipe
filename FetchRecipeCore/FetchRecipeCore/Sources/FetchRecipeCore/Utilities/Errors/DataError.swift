@@ -7,9 +7,9 @@
 
 import Foundation
 
-typealias DataResult<T> = Result<T, DataError>
+public typealias DataResult<T> = Result<T, DataError>
 
-enum DataError: LocalizedError {
+public enum DataError: LocalizedError {
     case invalidUUIDFormat(String)
     case invalidURLFormat(String)
     case invalidIngredientMeasurement(String)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AppEnvironment {
+public enum AppEnvironment {
     case prod
     case mock
 }
