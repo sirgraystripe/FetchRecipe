@@ -10,7 +10,7 @@ import Foundation
 import RegexBuilder
 
 public struct MealInfo {
-    var id = UUID()
+    var id: String = UUID().uuidString
     var name: String
     var dateModified: Date?
     var area: String
@@ -22,10 +22,6 @@ public struct MealInfo {
     var thumbnailURL: URL?
 
     static func convert(from dto: MealInfoDTO) -> DataResult<MealInfo> {
-        guard let id = UUID(uuidString: dto.idMeal) else {
-            return .failure(.invalidUUIDFormat("MealInfoDTO"))
-        }
-
         guard let thumbnailURL = URL(string: dto.strMealThumb) else {
             return .failure(.invalidURLFormat("MealInfoDTO"))
         }
@@ -38,7 +34,7 @@ public struct MealInfo {
 
         return .success(
             MealInfo(
-                id: id,
+                id: dto.idMeal,
                 name: dto.idMeal,
                 area: dto.strArea,
                 category: dto.strCategory,

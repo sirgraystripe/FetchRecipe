@@ -9,22 +9,18 @@ import FetchRecipeCore
 import Foundation
 
 public struct Meal: Identifiable {
-    public var id = UUID()
+    public var id: String = UUID().uuidString
     public var name: String
     /// Optional for mocking case where we can use a placeholder
     public var thumbnailURL: URL?
 
     public static func convert(from dto: MealDTO) -> DataResult<Meal> {
-        guard let id = UUID(uuidString: dto.idMeal) else {
-            return .failure(.invalidUUIDFormat("MealDTO"))
-        }
-
         guard let thumbnailURL = URL(string: dto.strMealThumb) else {
             return .failure(.invalidURLFormat("MealDTO"))
         }
 
         return .success(Meal(
-            id: id,
+            id: dto.idMeal,
             name: dto.strMeal,
             thumbnailURL: thumbnailURL
         ))
