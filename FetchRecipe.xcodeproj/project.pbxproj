@@ -3,28 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D704E2822C8586A50034C26C /* FetchRecipeCore in Frameworks */ = {isa = PBXBuildFile; productRef = D704E2812C8586A50034C26C /* FetchRecipeCore */; };
+		D704E2842C8586A50034C26C /* FetchRecipeDomain in Frameworks */ = {isa = PBXBuildFile; productRef = D704E2832C8586A50034C26C /* FetchRecipeDomain */; };
+		D704E2862C8586A50034C26C /* FetchRecipeNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = D704E2852C8586A50034C26C /* FetchRecipeNetwork */; };
+		D704E2882C8586A50034C26C /* FetchRecipeUI in Frameworks */ = {isa = PBXBuildFile; productRef = D704E2872C8586A50034C26C /* FetchRecipeUI */; };
+		D704E28B2C8586C50034C26C /* FetchRecipeUI in Frameworks */ = {isa = PBXBuildFile; productRef = D704E28A2C8586C50034C26C /* FetchRecipeUI */; };
 		D75892292C85223100AD7588 /* FetchRecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75892282C85223100AD7588 /* FetchRecipeApp.swift */; };
 		D758922D2C85223200AD7588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D758922C2C85223200AD7588 /* Assets.xcassets */; };
 		D75892302C85223200AD7588 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D758922F2C85223200AD7588 /* Preview Assets.xcassets */; };
-		D7C995EE2C8528F50069E55D /* FetchRecipeCore in Frameworks */ = {isa = PBXBuildFile; productRef = D7C995ED2C8528F50069E55D /* FetchRecipeCore */; };
-		D7C995F32C8540D70069E55D /* FetchRecipeDomain in Frameworks */ = {isa = PBXBuildFile; productRef = D7C995F22C8540D70069E55D /* FetchRecipeDomain */; };
-		D7C995F52C8540D70069E55D /* FetchRecipeNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = D7C995F42C8540D70069E55D /* FetchRecipeNetwork */; };
-		D7C995F72C8540D70069E55D /* FetchRecipeUI in Frameworks */ = {isa = PBXBuildFile; productRef = D7C995F62C8540D70069E55D /* FetchRecipeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D704E2712C8586360034C26C /* FetchRecipeUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FetchRecipeUI; sourceTree = "<group>"; };
+		D704E2722C8586590034C26C /* FetchRecipeNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FetchRecipeNetwork; sourceTree = "<group>"; };
+		D704E2732C8586590034C26C /* FetchRecipeCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FetchRecipeCore; sourceTree = "<group>"; };
+		D704E2742C8586590034C26C /* FetchRecipeDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FetchRecipeDomain; sourceTree = "<group>"; };
 		D75892252C85223100AD7588 /* FetchRecipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchRecipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75892282C85223100AD7588 /* FetchRecipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRecipeApp.swift; sourceTree = "<group>"; };
 		D758922C2C85223200AD7588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D758922F2C85223200AD7588 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D7C995EB2C8528EA0069E55D /* FetchRecipeCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FetchRecipeCore; path = FetchRecipeCore/FetchRecipeCore; sourceTree = "<group>"; };
-		D7C995EF2C85401E0069E55D /* FetchRecipeNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FetchRecipeNetwork; path = FetchRecipeNetwork/FetchRecipeNetwork; sourceTree = "<group>"; };
-		D7C995F02C8540690069E55D /* FetchRecipeDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FetchRecipeDomain; path = FetchRecipeDomain/FetchRecipeDomain; sourceTree = "<group>"; };
-		D7C995F12C8540B50069E55D /* FetchRecipeUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FetchRecipeUI; path = FetchRecipeUI/FetchRecipeUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,10 +33,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7C995EE2C8528F50069E55D /* FetchRecipeCore in Frameworks */,
-				D7C995F72C8540D70069E55D /* FetchRecipeUI in Frameworks */,
-				D7C995F32C8540D70069E55D /* FetchRecipeDomain in Frameworks */,
-				D7C995F52C8540D70069E55D /* FetchRecipeNetwork in Frameworks */,
+				D704E2822C8586A50034C26C /* FetchRecipeCore in Frameworks */,
+				D704E28B2C8586C50034C26C /* FetchRecipeUI in Frameworks */,
+				D704E2882C8586A50034C26C /* FetchRecipeUI in Frameworks */,
+				D704E2842C8586A50034C26C /* FetchRecipeDomain in Frameworks */,
+				D704E2862C8586A50034C26C /* FetchRecipeNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,10 +47,10 @@
 		D758921C2C85223100AD7588 = {
 			isa = PBXGroup;
 			children = (
-				D7C995F12C8540B50069E55D /* FetchRecipeUI */,
-				D7C995F02C8540690069E55D /* FetchRecipeDomain */,
-				D7C995EF2C85401E0069E55D /* FetchRecipeNetwork */,
-				D7C995EB2C8528EA0069E55D /* FetchRecipeCore */,
+				D704E2712C8586360034C26C /* FetchRecipeUI */,
+				D704E2732C8586590034C26C /* FetchRecipeCore */,
+				D704E2742C8586590034C26C /* FetchRecipeDomain */,
+				D704E2722C8586590034C26C /* FetchRecipeNetwork */,
 				D75892272C85223100AD7588 /* FetchRecipe */,
 				D75892262C85223100AD7588 /* Products */,
 				D7C995EC2C8528F50069E55D /* Frameworks */,
@@ -105,10 +107,11 @@
 			);
 			name = FetchRecipe;
 			packageProductDependencies = (
-				D7C995ED2C8528F50069E55D /* FetchRecipeCore */,
-				D7C995F22C8540D70069E55D /* FetchRecipeDomain */,
-				D7C995F42C8540D70069E55D /* FetchRecipeNetwork */,
-				D7C995F62C8540D70069E55D /* FetchRecipeUI */,
+				D704E2812C8586A50034C26C /* FetchRecipeCore */,
+				D704E2832C8586A50034C26C /* FetchRecipeDomain */,
+				D704E2852C8586A50034C26C /* FetchRecipeNetwork */,
+				D704E2872C8586A50034C26C /* FetchRecipeUI */,
+				D704E28A2C8586C50034C26C /* FetchRecipeUI */,
 			);
 			productName = FetchRecipe;
 			productReference = D75892252C85223100AD7588 /* FetchRecipe.app */;
@@ -138,6 +141,12 @@
 				Base,
 			);
 			mainGroup = D758921C2C85223100AD7588;
+			packageReferences = (
+				D704E2782C8586830034C26C /* XCLocalSwiftPackageReference "FetchRecipeCore" */,
+				D704E27B2C85868B0034C26C /* XCLocalSwiftPackageReference "FetchRecipeDomain" */,
+				D704E27E2C8586910034C26C /* XCLocalSwiftPackageReference "FetchRecipeNetwork" */,
+				D704E2892C8586C50034C26C /* XCLocalSwiftPackageReference "FetchRecipeUI" */,
+			);
 			productRefGroup = D75892262C85223100AD7588 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,20 +382,43 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		D704E2782C8586830034C26C /* XCLocalSwiftPackageReference "FetchRecipeCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = FetchRecipeCore;
+		};
+		D704E27B2C85868B0034C26C /* XCLocalSwiftPackageReference "FetchRecipeDomain" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = FetchRecipeDomain;
+		};
+		D704E27E2C8586910034C26C /* XCLocalSwiftPackageReference "FetchRecipeNetwork" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = FetchRecipeNetwork;
+		};
+		D704E2892C8586C50034C26C /* XCLocalSwiftPackageReference "FetchRecipeUI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = FetchRecipeUI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		D7C995ED2C8528F50069E55D /* FetchRecipeCore */ = {
+		D704E2812C8586A50034C26C /* FetchRecipeCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FetchRecipeCore;
 		};
-		D7C995F22C8540D70069E55D /* FetchRecipeDomain */ = {
+		D704E2832C8586A50034C26C /* FetchRecipeDomain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FetchRecipeDomain;
 		};
-		D7C995F42C8540D70069E55D /* FetchRecipeNetwork */ = {
+		D704E2852C8586A50034C26C /* FetchRecipeNetwork */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FetchRecipeNetwork;
 		};
-		D7C995F62C8540D70069E55D /* FetchRecipeUI */ = {
+		D704E2872C8586A50034C26C /* FetchRecipeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FetchRecipeUI;
+		};
+		D704E28A2C8586C50034C26C /* FetchRecipeUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FetchRecipeUI;
 		};
