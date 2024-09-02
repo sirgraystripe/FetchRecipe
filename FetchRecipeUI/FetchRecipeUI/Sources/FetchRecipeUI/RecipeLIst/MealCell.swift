@@ -20,7 +20,7 @@ struct MealCell: View {
                     Color.gray
                 }
                 .aspectRatio(1 / 1, contentMode: .fill)
-                .frame(maxWidth: 20, maxHeight: 20)
+                .frame(maxWidth: 40, maxHeight: 40)
                 .clipShape(.rect(cornerRadius: 4))
 
             Text(meal.name)
@@ -30,6 +30,6 @@ struct MealCell: View {
 }
 
 #Preview {
-    RecipeList(meals: Meal.Mock.allMeals)
+    MealList(meals: Meal.Mock.allMeals)
         .mockStore()
 }

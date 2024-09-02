@@ -15,9 +15,13 @@ struct MealList: View {
 
     @State var meals = [Meal]()
 
+    private var sortedMeals: [Meal] {
+        meals.sorted(by: { $0.name < $1.name })
+    }
+
     var body: some View {
         List {
-            ForEach(meals) { meal in
+            ForEach(sortedMeals) { meal in
                 MealCell(meal: meal)
             }
         }
