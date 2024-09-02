@@ -1,0 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/SwiftPackageManager
+# Edit at https://www.toptal.com/developers/gitignore?templates=SwiftPackageManager
+
+### SwiftPackageManager ###
+Packages
+.build/
+xcuserdata
+DerivedData/
+*.xcodeproj
+.DS_Store
+.swiftpm/configuration/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+
+# End of https://www.toptal.com/developers/gitignore/api/SwiftPackageManager
