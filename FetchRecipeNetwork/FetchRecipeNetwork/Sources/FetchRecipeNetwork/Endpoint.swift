@@ -28,9 +28,9 @@ struct Endpoint {
             .appending(queryItems: [.init(name: "c", value: "Dessert")])
     }
 
-    func getMealDetails(mealID: UUID) -> URL {
+    func getMealDetails(mealID: String) -> URL {
         base
             .appending(components: "lookup.php")
-            .appending(queryItems: [.init(name: "i", value: mealID.uuidString)])
+            .appending(queryItems: [.init(name: "i", value: mealID)])
     }
 }

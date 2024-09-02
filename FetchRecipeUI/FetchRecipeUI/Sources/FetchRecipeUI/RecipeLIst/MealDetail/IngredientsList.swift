@@ -17,7 +17,7 @@ struct IngredientsList: View {
                     .bold()
                 Spacer()
                 if let measurement = ingredient.measurement {
-                    Text("\(measurement.value.formatted())\(measurement.unit.symbol)")
+                    Text("\(measurement.value.formatted()) \(measurement.unit.symbol)")
                 }
             }
         }

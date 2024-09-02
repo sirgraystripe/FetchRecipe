@@ -31,7 +31,18 @@ struct RecipeServiceProd: RecipeService {
         return .success(meals)
     }
 
-    func fetchMealDetails(meal _: Meal) -> NetworkResult<MealInfo> {
-        .failure(.notImplemented)
+    func fetchMealDetails(meal: Meal) async -> NetworkResult<MealInfo> {
+        let mealInfoDTO: MealInfoDTO
+        switch await AppNetwork<MealInfoDTO>.get(url: endpoint.getMealDetails(mealID: meal.id)) {
+        case let .failure(error):
+            return .failure(error)
+        case let .success(dto):
+            mealInfoDTO = dto
+        }
+
+        switch MealInfo.convert(from: mealInfoDTO) {
+        case let .success(mealInfo): return .success(mealInfo)
+        case let .failure(error): return .failure(.dataError(error))
+        }
     }
 }

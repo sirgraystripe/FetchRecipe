@@ -21,7 +21,11 @@ public struct MealInfo {
     /// Optional for mocking case where we can use a placeholder
     public var thumbnailURL: URL?
 
-    static func convert(from dto: MealInfoDTO) -> DataResult<MealInfo> {
+    public static func convert(from dto: MealInfoDTO) -> DataResult<MealInfo> {
+        guard let dto = dto.meals.first else {
+            return .failure(.invalidURLFormat(dto.meals.description))
+        }
+
         guard let thumbnailURL = URL(string: dto.strMealThumb) else {
             return .failure(.invalidURLFormat("MealInfoDTO"))
         }
@@ -45,8 +49,8 @@ public struct MealInfo {
     }
 
     // TODO: Unit test the crap outta this
-    private static func convertIngredients(_ dto: MealInfoDTO) -> DataResult<[Ingredient]> {
-        let pairs = [
+    private static func convertIngredients(_ dto: MealInfoDataDTO) -> DataResult<[Ingredient]> {
+        var pairs = [
             (dto.strIngredient1, dto.strMeasure1),
             (dto.strIngredient2, dto.strMeasure2),
             (dto.strIngredient3, dto.strMeasure3),
@@ -69,6 +73,9 @@ public struct MealInfo {
             (dto.strIngredient20, dto.strMeasure20),
         ]
 
+        // Remove empty values
+        pairs = pairs.filter { !$0.0.isEmpty && !$0.1.isEmpty }
+
         var ingredients = [Ingredient]()
         for (ingredientString, measurementString) in pairs {
             guard let chunked = chunk(measurementString) else {
@@ -80,7 +87,7 @@ public struct MealInfo {
                 unit: chunked.1
             )
             if let ingredient = Ingredient(
-                name: dto.strIngredient1,
+                name: ingredientString,
                 measurement: measurement
             ) {
                 ingredients.append(ingredient)
@@ -95,11 +102,14 @@ public struct MealInfo {
     private static func chunk(_ measurement: String) -> (Double, Unit)? {
         let regex = Regex {
             Capture {
-                OneOrMore {
+                ZeroOrMore {
                     .digit
                 }
             }
             Capture {
+                ZeroOrMore {
+                    .whitespace
+                }
                 ZeroOrMore {
                     .word
                 }
@@ -108,7 +118,17 @@ public struct MealInfo {
 
         if let match = measurement.firstMatch(of: regex) {
             let (_, value, unit) = match.output
-            return (value, unit) as? (Double, Unit)
+            let valueConverted = if let converted = try? Double(String(value), format: .number),
+                                    !String(value).isEmpty
+            {
+                converted
+            } else {
+                1.0
+            }
+
+            let unitConverted = Unit(symbol: String(unit).trimmingCharacters(in: .whitespaces))
+
+            return (valueConverted, unitConverted) as (Double, Unit)
         } else {
             return nil
         }

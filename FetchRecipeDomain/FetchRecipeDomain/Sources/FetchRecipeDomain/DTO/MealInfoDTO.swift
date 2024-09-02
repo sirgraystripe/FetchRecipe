@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct MealInfoDTO: Codable {
+public struct MealInfoDTO: Codable {
+    var meals: [MealInfoDataDTO]
+}
+
+public struct MealInfoDataDTO: Codable {
     // FIXME: Verify the type this returns, most hits are giving nil so not sure.
     let dateModified: String?
     let idMeal: String
