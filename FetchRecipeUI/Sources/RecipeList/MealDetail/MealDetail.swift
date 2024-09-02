@@ -33,6 +33,11 @@ struct MealDetail: View {
                         IngredientsList(ingredients: ingredients)
                     }
                 }
+                if let instructions = mealInfo?.instructions {
+                    Section("Instructions") {
+                        Text(instructions)
+                    }
+                }
             }
         }
         .navigationTitle(meal.name)

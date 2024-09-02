@@ -16,8 +16,8 @@ public struct MealInfo {
     public var area: String
     // TODO: What kinds are there? Make enum!
     public var category: String
-
     public var ingredients: [Ingredient]
+    public var instructions: String
     /// Optional for mocking case where we can use a placeholder
     public var thumbnailURL: URL?
 
@@ -43,6 +43,7 @@ public struct MealInfo {
                 area: dto.strArea,
                 category: dto.strCategory,
                 ingredients: ingredients,
+                instructions: dto.strInstructions,
                 thumbnailURL: thumbnailURL
             )
         )

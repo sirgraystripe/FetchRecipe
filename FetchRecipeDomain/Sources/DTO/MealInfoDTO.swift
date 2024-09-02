@@ -23,8 +23,11 @@ public struct MealInfoDataDTO: Codable {
     let strDrinkAlternate: String?
     // FIXME: Verify the type this returns, most hits are giving nil so not sure.
     let strImageSource: String?
-
     let strSource: String
+
+    let strInstructions: String
+    let strMeal: String
+    let strMealThumb: String
 
     // FIXME: Verify the type this returns, most hits are giving nil so not sure.
     let strTags: String?
@@ -52,9 +55,6 @@ public struct MealInfoDataDTO: Codable {
     let strIngredient18: String
     let strIngredient19: String
     let strIngredient20: String
-    let strInstructions: String
-    let strMeal: String
-    let strMealThumb: String
 
     // MARK: Measure
 
