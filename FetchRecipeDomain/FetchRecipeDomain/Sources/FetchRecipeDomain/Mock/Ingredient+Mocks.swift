@@ -8,7 +8,7 @@
 import Foundation
 
 extension Ingredient: Mockable {
-    enum Mock {
+    public enum Mock {
         static var marscapone_12g: Ingredient {
             if let ingredient = Ingredient(
                 name: "Marscapone",

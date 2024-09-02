@@ -8,7 +8,7 @@
 import Foundation
 
 extension MealInfo: Mockable {
-    enum Mock {
+    public enum Mock {
         static var tiramisuInfo: MealInfo {
             MealInfo(
                 name: "Tiramisu",

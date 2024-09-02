@@ -8,11 +8,11 @@
 import FetchRecipeCore
 import Foundation
 
-public struct Meal {
-    var id = UUID()
-    var name: String
+public struct Meal: Identifiable {
+    public var id = UUID()
+    public var name: String
     /// Optional for mocking case where we can use a placeholder
-    var thumbnailURL: URL?
+    public var thumbnailURL: URL?
 
     static func convert(from dto: MealDTO) -> DataResult<Meal> {
         guard let id = UUID(uuidString: dto.idMeal) else {

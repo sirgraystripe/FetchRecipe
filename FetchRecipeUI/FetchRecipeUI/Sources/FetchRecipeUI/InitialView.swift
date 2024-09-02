@@ -14,10 +14,11 @@ public struct InitialView: View {
     public init() {}
 
     public var body: some View {
-        EmptyView()
+        Text("Hello, World!")
     }
 }
 
 #Preview {
     InitialView()
+        .mockStore()
 }

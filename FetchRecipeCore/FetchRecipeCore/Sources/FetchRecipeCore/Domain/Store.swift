@@ -16,7 +16,7 @@ public final class Store {
     }
 }
 
-extension View {
+public extension View {
     /// To use with Previews
     func mockStore() -> some View {
         environment(Store(environment: .mock))
