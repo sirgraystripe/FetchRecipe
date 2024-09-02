@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AppEnvironment {
+public enum AppEnvironment: CaseIterable, Sendable {
     case prod
     case mock
 }

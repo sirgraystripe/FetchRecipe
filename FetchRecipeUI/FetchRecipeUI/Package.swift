@@ -16,6 +16,7 @@ let package = Package(
     dependencies: [
         .package(path: "../../FetchRecipeCore"),
         .package(path: "../../FetchRecipeDomain"),
+        .package(path: "../../FetchRecipeNetwork"),
         .package(url: "https://github.com/onevcat/Kingfisher.git", from: "7.12.0"),
     ],
     targets: [
@@ -26,6 +27,7 @@ let package = Package(
             dependencies: [
                 .product(name: "FetchRecipeCore", package: "FetchRecipeCore"),
                 .product(name: "FetchRecipeDomain", package: "FetchRecipeDomain"),
+                .product(name: "FetchRecipeNetwork", package: "FetchRecipeNetwork"),
                 .product(name: "Kingfisher", package: "Kingfisher"),
             ]
         ),

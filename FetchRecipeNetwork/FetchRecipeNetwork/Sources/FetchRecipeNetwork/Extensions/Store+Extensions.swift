@@ -8,11 +8,11 @@
 import FetchRecipeCore
 import Foundation
 
-extension Store {
+public extension Store {
     var recipeService: RecipeService {
         switch environment {
         case .prod: fatalError("RecipeService not implemented for prod")
-        case .mock: fatalError("RecipeService not implemented for mock")
+        case .mock: RecipeServiceMock(environment: .mock)
         }
     }
 }

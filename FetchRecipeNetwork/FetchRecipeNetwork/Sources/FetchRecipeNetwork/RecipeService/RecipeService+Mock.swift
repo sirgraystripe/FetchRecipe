@@ -10,13 +10,13 @@ import FetchRecipeDomain
 import Foundation
 
 struct RecipeServiceMock: RecipeService {
+    let environment: AppEnvironment
+
     func fetchDesserts() -> NetworkResult<[Meal]> {
-        .failure(.notImplemented)
+        .success(Meal.Mock.allMeals)
     }
 
     func fetchMealDetails(meal _: Meal) -> NetworkResult<MealInfo> {
         .failure(.notImplemented)
     }
-
-    var environment: AppEnvironment
 }

@@ -14,7 +14,7 @@ public extension Meal {
         }
 
         public static var parfait: Meal {
-            Meal(name: "Parfair")
+            Meal(name: "Parfait")
         }
 
         public static var chocolateCake: Meal {

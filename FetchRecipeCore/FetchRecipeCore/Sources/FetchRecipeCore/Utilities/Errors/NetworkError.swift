@@ -12,7 +12,7 @@ public typealias NetworkResult<T> = Result<T, NetworkError>
 public enum NetworkError: LocalizedError {
     case notImplemented
 
-    var userFriendlyDescription: String {
+    public var userFriendlyDescription: String {
         switch self {
         case .notImplemented: "Not implemented"
         }

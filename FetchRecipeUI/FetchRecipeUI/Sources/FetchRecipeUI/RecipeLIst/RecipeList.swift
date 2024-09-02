@@ -7,6 +7,7 @@
 
 import FetchRecipeCore
 import FetchRecipeDomain
+import FetchRecipeNetwork
 import SwiftUI
 
 struct RecipeList: View {
@@ -18,6 +19,16 @@ struct RecipeList: View {
         List {
             ForEach(meals) { meal in
                 MealCell(meal: meal)
+            }
+        }
+        .task {
+            switch store.recipeService.fetchDesserts() {
+            case let .success(meals):
+                self.meals = meals
+                AppLogger.UI.debug("Fetched meals \(meals.map(\.name))")
+            case let .failure(error):
+                // TODO: Show to user with a nice toast
+                AppLogger.UI.error("Failed to fetch meals: \(error.userFriendlyDescription)")
             }
         }
     }
