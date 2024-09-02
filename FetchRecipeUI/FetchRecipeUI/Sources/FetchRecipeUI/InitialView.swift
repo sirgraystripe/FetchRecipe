@@ -14,7 +14,7 @@ public struct InitialView: View {
     public init() {}
 
     public var body: some View {
-        RecipeList()
+        MealList()
     }
 }
 

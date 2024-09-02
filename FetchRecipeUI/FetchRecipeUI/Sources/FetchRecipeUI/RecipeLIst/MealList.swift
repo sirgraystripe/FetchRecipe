@@ -1,5 +1,5 @@
 //
-//  RecipeList.swift
+//  MealList.swift
 //
 //
 //  Created by Peter Kos on 9/1/24.
@@ -10,7 +10,7 @@ import FetchRecipeDomain
 import FetchRecipeNetwork
 import SwiftUI
 
-struct RecipeList: View {
+struct MealList: View {
     @Environment(Store.self) private var store
 
     @State var meals = [Meal]()
@@ -35,6 +35,6 @@ struct RecipeList: View {
 }
 
 #Preview {
-    RecipeList(meals: Meal.Mock.allMeals)
+    MealList(meals: Meal.Mock.allMeals)
         .mockStore()
 }
