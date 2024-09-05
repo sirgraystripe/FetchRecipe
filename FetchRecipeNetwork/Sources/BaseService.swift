@@ -10,12 +10,10 @@ import Foundation
 
 public protocol BaseService: Sendable {
     var environment: AppEnvironment { get }
-
-    init(environment: AppEnvironment)
 }
 
 extension BaseService {
-    var endpoint: Endpoint {
+    public var endpoint: Endpoint {
         Endpoint(environment: environment)
     }
 }

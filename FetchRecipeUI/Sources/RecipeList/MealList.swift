@@ -7,13 +7,12 @@
 
 import FetchRecipeCore
 import FetchRecipeDomain
-import FetchRecipeNetwork
 import SwiftUI
 
 struct MealList: View {
     @Environment(Store.self) private var store
 
-    @State var meals = [Meal]()
+    @Bindable var meals: [Meal]
 
     private var sortedMeals: [Meal] {
         meals.sorted(by: { $0.name < $1.name })
@@ -30,14 +29,7 @@ struct MealList: View {
             }
         }
         .task {
-            switch await store.recipeService.fetchDesserts() {
-            case let .success(meals):
-                self.meals = meals
-                AppLogger.UI.debug("Fetched meals \(meals.map(\.name))")
-            case let .failure(error):
-                // TODO: Show to user with a nice toast
-                AppLogger.UI.error("Failed to fetch meals: \(error.userFriendlyDescription)")
-            }
+            await store.fetchDesserts()
         }
         .navigationTitle("Meals")
     }
@@ -45,7 +37,7 @@ struct MealList: View {
 
 #Preview {
     NavigationStack {
-        MealList(meals: Meal.Mock.allMeals)
+        MealList(meals: .constant(Meal.Mock.allMeals))
             .mockStore()
     }
 }

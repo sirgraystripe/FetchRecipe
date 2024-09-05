@@ -9,14 +9,18 @@ import FetchRecipeCore
 import FetchRecipeDomain
 import Foundation
 
-struct RecipeServiceMock: RecipeService {
-    let environment: AppEnvironment
+public struct RecipeServiceMock: RecipeService {
+    public let environment: AppEnvironment
 
-    func fetchDesserts() -> NetworkResult<[Meal]> {
+    public init(environment: AppEnvironment) {
+        self.environment = environment
+    }
+
+    public func fetchDesserts() -> NetworkResult<[Meal]> {
         .success(Meal.Mock.allMeals)
     }
 
-    func fetchMealDetails(meal: Meal) -> NetworkResult<MealInfo> {
+    public func fetchMealDetails(meal: Meal) -> NetworkResult<MealInfo> {
         if meal == Meal.Mock.tiramisu {
             .success(MealInfo.Mock.tiramisuInfo)
         } else {

@@ -7,7 +7,9 @@
 
 import Foundation
 
-public enum AppEnvironment: CaseIterable, Sendable {
+public enum AppEnvironment: String, CaseIterable, Sendable, Identifiable {
     case prod
     case mock
+
+    public var id: String { self.rawValue }
 }

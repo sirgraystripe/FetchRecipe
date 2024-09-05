@@ -8,7 +8,7 @@
 import FetchRecipeCore
 import Foundation
 
-struct Endpoint {
+public struct Endpoint {
     var environment: AppEnvironment
 
     private var base: URL {

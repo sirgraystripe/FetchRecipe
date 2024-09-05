@@ -9,10 +9,14 @@ import FetchRecipeCore
 import FetchRecipeDomain
 import Foundation
 
-struct RecipeServiceProd: RecipeService {
-    var environment: AppEnvironment
+public struct RecipeServiceProd: RecipeService {
+    public var environment: AppEnvironment
 
-    func fetchDesserts() async -> NetworkResult<[Meal]> {
+    public init(environment: AppEnvironment) {
+        self.environment = environment
+    }
+
+    public func fetchDesserts() async -> NetworkResult<[Meal]> {
         let mealsDTO: MealsDTO
         switch await AppNetwork<MealsDTO>.get(url: endpoint.getDesserts()) {
         case let .failure(error):
@@ -31,7 +35,7 @@ struct RecipeServiceProd: RecipeService {
         return .success(meals)
     }
 
-    func fetchMealDetails(meal: Meal) async -> NetworkResult<MealInfo> {
+    public func fetchMealDetails(meal: Meal) async -> NetworkResult<MealInfo> {
         let mealInfoDTO: MealInfoDTO
         switch await AppNetwork<MealInfoDTO>.get(url: endpoint.getMealDetails(mealID: meal.id)) {
         case let .failure(error):
