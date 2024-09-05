@@ -11,8 +11,7 @@ import SwiftUI
 
 struct MealList: View {
     @Environment(Store.self) private var store
-
-    @Bindable var meals: [Meal]
+    var meals: [Meal]
 
     private var sortedMeals: [Meal] {
         meals.sorted(by: { $0.name < $1.name })
@@ -37,7 +36,7 @@ struct MealList: View {
 
 #Preview {
     NavigationStack {
-        MealList(meals: .constant(Meal.Mock.allMeals))
+        MealList(meals: Meal.Mock.allMeals)
             .mockStore()
     }
 }

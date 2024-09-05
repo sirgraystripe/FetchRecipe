@@ -29,6 +29,7 @@ struct MealDetail: View {
                     )
                 }
                 if let ingredients = mealInfo?.ingredients {
+                    // TODO: Strings file
                     Section(ingredients.count == 1 ? "Ingredient" : "Ingredients") {
                         IngredientsList(ingredients: ingredients)
                     }
