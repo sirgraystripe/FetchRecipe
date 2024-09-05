@@ -4,8 +4,8 @@
 _A simple recipe browser._
 
 | List | Detail |
-|---|---|
-|<img src=".github/screenshot.png" alt="Screenshot of list of all dessert recipes" />|<img src=".github/screenshot2.png" alt="A detail view of Tiramisu dessert" />|
+|:---:|:---:|
+|<img src=".github/screenshot.png" width="250px" alt="Screenshot of list of all dessert recipes" />|<img src=".github/screenshot2.png" width="250px" alt="A detail view of Tiramisu dessert" />|
 
 ## Architecture
 
